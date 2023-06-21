@@ -1,0 +1,30 @@
+{% extends 'ems/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>create page</title>
+    {% endblock %}
+</head>
+    {% block body_block %}
+    <div class="emp-form">
+        {% if form.instance.pk %}
+            <h3 class="update">Update Employee Details</h3>
+        {% else %}
+            <h3 class="update">Create Employee Details</h3>
+        {% endif %}
+        <form method="POST" class="create-form">
+            {% csrf_token %}
+            {{form.as_p}}
+        {% if form.instance.pk %}
+            <input type="submit" value="Update" class="btn btn-outline-success">
+        {% else %}
+        <a href="{% url 'EmployeeList' %}"><input type="submit" value="Create" class="btn btn-outline-primary"></a>
+        {% endif %}
+        </form>
+</div>
+    {% endblock %}
+</html>

@@ -1,0 +1,120 @@
+.base{
+    background-color: rgb(243, 228, 239);
+}
+.background-nav{
+    background-image: linear-gradient(to right, #ffffff, #e775761b);
+}
+    
+.home-heading{
+    background-color: #ffb7a6;
+    font-family: 'Roboto';
+}
+.emp-form{
+    background-size: cover;
+    background-image: linear-gradient( to right,#a6dbff, #e982e5) ;
+    text-align: left;
+    padding: 50px;
+    border-radius: 16px;  
+    color: black;
+    font-family: 'Roboto'; 
+    font-weight: 600;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    height: 70vh;
+    width: 56vw;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: 500;
+    box-shadow: #a6dbff 0px 2px;
+}
+.create-form{
+    display: flex; 
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 20px;
+    margin-right: 50px;
+    padding: 10px;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+.update{
+    color: #28144a;
+    font-family: "Roboto";
+}
+.emp-table{
+    background-image: linear-gradient( to right,#a6dbff, #e982e5) ;
+    border-radius: 16px;
+    background-size: cover;
+    text-align: left;
+    margin-left: 62px;
+    margin-bottom: 20px;
+    margin-right: 62px;
+    margin-top: 16px;
+    padding: 30px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table-styles{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 15px;
+    overflow: hidden;
+    height: fit-content;
+    width: fit-content;
+    padding-bottom: 30px;
+}
+.heding-font{
+  font-size: 12px;
+}
+.data-font{
+    font-size: 12px;
+}
+.edit-font{
+    font-size: 10px;
+}
+.text-emp{
+    color: black;
+    font-family: 'Roboto'; 
+    padding-left: 36px;
+    font-weight: 500;
+}
+.detail-form{
+    background-image: linear-gradient( to right,#a6dbff, #e982e5) ;
+    border-radius: 16px;
+    height: 75vh;
+    width: 40vw;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    font-family: "Roboto";
+    padding-left: 90px;
+}
+.submit{
+    margin-left: 340px;
+}
+.f{
+    padding-left: 70px;
+    padding-top: 10px;
+}
+.count{
+    color: rgb(181, 40, 148);
+    background-color: aqua;
+    border-radius: 16px;
+    height: 20px;
+    width: 20px;
+    font-size: 24px;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 6px;
+}

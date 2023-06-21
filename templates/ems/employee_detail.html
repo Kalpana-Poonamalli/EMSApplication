@@ -1,0 +1,32 @@
+{% extends 'ems/base.html'%}
+
+{% block title %}
+<title>Home page</title>
+{% endblock %}
+
+{% block body_block %}
+<form class="detail-form">
+<h3 class="detail-emp-head">Detail Information of Employee</h3>
+<div class="f">
+    <h5>Employee Name : {{Emp.name}}</h5>
+    <h5>DOB :  {{Emp.dob}}</h5>
+    <h5>DOJ : {{Emp.doj}}</h5>
+    <h5>Department : {{Emp.department}}</h5>
+    <h5>post : {{Emp.post}}</h5>
+    <h5>Address : {{Emp.address}}</h5>
+    <h5>City : {{Emp.city}}</h5>
+    <h5>Country : {{Emp.country}}</h5>
+    <h5>ZipCode : {{Emp.zipCode}}</h5>
+    <h5>State : {{Emp.state}}</h5>
+    <h5>Active : {{Emp.active}}</h5>
+    <h5>on_leave : {{Emp.on_leave}}</h5>
+    {% if Emp.on_leave %}
+        <h4>Leave_count : {{Emp.leaveCount|add:1}}</h5>
+    {% else %}
+    <h5>Leave_count : {{Emp.leaveCount}}</h5>
+    {% endif %}
+</div>    
+    
+<a href="{% url 'EmployeeList' %}" class="btn btn-primary submit">Submit</a>
+
+{% endblock %}

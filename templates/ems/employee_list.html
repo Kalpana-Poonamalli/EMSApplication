@@ -1,0 +1,51 @@
+{% extends 'ems/base.html'%}
+{% block title %}
+<title>EmployeeList</title>
+{% endblock %}
+{% block body_block %}
+<div class="emp-table">
+<h2 class="text-emp">Total Employees are <span class="count">{{ employee_count }}</span></h1>
+<table class="table table-styles">
+    <thead class="bg-primary text-white heding-font">
+    <th>Emp_ID</th>
+    <th>Name</th>
+    <th>DOB</th>
+    <th>DOJ</th>
+    <th>Department</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Country</th>
+    <th>Zipcode</th>
+    <th>State</th>
+    <th>Active</th>
+    <th>On Leave</th>
+    <th>Leave Count</th>
+    <th>Edit Employee</th>
+</thead>
+<tbody>
+    {% for Emp in Employees %}
+    <tr class="text-primary bg-light data-font">
+        <td>{{Emp.id}}</td>
+        <td>{{Emp.name}}</td>
+        <td>{{Emp.dob}}</td>
+        <td>{{Emp.doj}}</td>
+        <td>{{Emp.department}}</td>
+        <td>{{Emp.address}}</td>
+        <td>{{Emp.city}}</td>
+        <td>{{Emp.country}}</td>
+        <td>{{Emp.zipCode}}</td>
+        <td>{{Emp.state}}</td>
+        <td>{{Emp.active}}</td>
+        <td>{{Emp.on_leave}}</td>  
+        {% if Emp.on_leave %}
+        <td>{{Emp.leaveCount|add:1}}</td>
+        {% else %} 
+        <td>{{Emp.leaveCount}}</td>
+        {% endif %}
+        <td><a href="{% url 'Update' pk=Emp.pk %}" class="btn btn-success text-decoration-underline edit-font">Edit</a></td>
+    </tr> 
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}
